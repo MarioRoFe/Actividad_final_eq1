@@ -1,0 +1,15 @@
+.formulario-dos-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .formulario-dos-columnas > div {
+    flex: 1 1 45%; /* Ajusta el ancho de cada columna según sea necesario */
+    margin-bottom: 20px; /* Espacio entre columnas */
+  }
+  
+  .formulario-dos-columnas label {
+    display: block;
+    margin-bottom: 5px;
+  }

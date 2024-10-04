@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} {{ super() }} Home {% endblock %}
+
+{% block content %}
+
+    <div class="card mb-3" style="max-width: 0 auto;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='/image/image.png') }}" class="card-img" alt="..." style="height: 100vh; object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h1 class="card-title">Introducción</h1>
+                <p class="card-text" style="text-align: justify;">Bienvenido a nuestra aplicación de monitoreo de satisfacción de clientes para una aerolínea. Este proyecto tiene como objetivo clasificar a los clientes en función de su nivel de satisfacción con diversos aspectos del servicio que reciben, como el servicio del personal, la comodidad de los asientos, la comida, la limpieza de los espacios y más. Para llevar a cabo esta clasificación, se ha entrenado un modelo de red neuronal de tipo MLP (Perceptrón Multicapa), que evalúa los datos de la encuesta completada por los clientes y determina si están "Satisfechos" o "Insatisfechos" con el servicio.</p>
+                <p class="card-text" style="text-align: justify;">La importancia de esta tarea radica en la capacidad de la aerolínea para monitorear de manera continua y precisa la calidad de su servicio, obteniendo información valiosa sobre la percepción de los usuarios. Esta herramienta permitirá detectar áreas de mejora y contribuir a una mejor experiencia de vuelo para los clientes.</p>
+                <p class="card-text"><small class="text-body-secondary"></small></p>
+                </div>
+            </div>
+        </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} {{ super() }} Resultado {% endblock %}
+
+{% block content %}
+    {% if resultado_cliente == "Insatisfecho" %}
+        <div class="container" style="margin-top: 40px;">
+            <div class="card" style="margin: 0 auto; width: 70vh;">
+                <video src="{{ url_for('static', filename='image/insatisfecho.mp4') }}" autoplay></video>
+                <div class="card-body">
+                    <p class="card-text">El cliente se encuentra <strong>{{ resultado_cliente | upper}}</strong> con el servicio brindado</p>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="container" style="margin-top: 50px;">
+            <div class="card" style="margin: 0 auto; width: 100vh;">
+                <video src="{{ url_for('static', filename='image/bien.mp4') }}" autoplay></video>
+                <div class="card-body">
+                    <p class="card-text"><center>El cliente se encuentra <strong>{{ resultado_cliente | upper}}</strong> con el servicio brindado</center></p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+

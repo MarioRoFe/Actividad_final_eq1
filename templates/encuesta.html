@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %} {{ super() }} Home {% endblock %}
+
+{% block content %}
+    <center>
+        <h1>Aerolíneas Oaxaca</h1>
+    </center>
+
+    <div class="container">
+        <div class="row">
+            <!-- Formulario de encuesta -->
+            <div class="col-md-8">
+                <div class="card" style="height: auto; margin-left: 50px; margin-right: 50px; margin-top: 110px; border-radius: 20px; background-color: #bfdbf7;">
+                    <div class="card-body">
+                        <h2 class="card-title" style="margin-left: 60px;">ENCUESTA DE SATISFACCIÓN</h2>
+                        <div style="margin-left: 50px; margin-right: 50px; margin-top: 30px;">
+                            <form action="" method="post">
+                                <!-- Primera fila -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="reservas">Reservas online</label>
+                                        <select name="reservas" id="reservas" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="comida_bebidas">Comida/Bebidas</label>
+                                        <select name="comida_bebidas" id="comida_bebidas" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <!-- Segunda fila -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="asientos">Asientos</label>
+                                        <select name="asientos" id="asientos" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="amenidades">Amenidades</label>
+                                        <select name="amenidades" id="amenidades" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <!-- Tercera fila -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="servicio_abordo">Servicio Abordo</label>
+                                        <select name="servicio_abordo" id="servicio_abordo" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="checking">Checking</label>
+                                        <select name="checking" id="checking" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <!-- Cuarta fila -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="personal">Personal</label>
+                                        <select name="personal" id="personal" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="limpieza">Limpieza</label>
+                                        <select name="limpieza" id="limpieza" class="form-select" aria-label="Default select example" required>
+                                            <option selected></option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- Botón de envío -->
+                                <div class="row">
+                                    <input type="submit" value="Enviar" class="btn btn-primary" style="width: 80%; margin-left: 53px;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Imagen -->
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='image/animation.gif') }}" style="width:100%; max-width:400px; height:auto; display:block; margin-top: 150px;">
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
